@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../head.ejs') %>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col main-grid">
+            <center>
+                    <br><br><br><br><br><br>
+                <%- include('../menu.ejs') %>
+            </center>
+            </div>
+            <div class="col-10">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                  </div>
+                  <div class="col-10">
+                    <br><br><br><br>
+                    <center><font size="30">Data history user</font></center>
+                    <table class="table">
+                      <script>
+                        console.log(data)
+                        </script>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="col-1">No</th>
+                          <th scope="col" class="col-2">Username</th>
+                          <th scope="col" class="col-2">Score</th>
+                          <th scope="col" class="col-5">Time</th>
+                          <th scope="col" class="col-3">userId</th>
+                          <th scope="col" class="col-3">Created at</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <% for (let i = 0; i < data.length; i++){ %>
+                          <th scope="row"><%= data[i].id %></th>
+                          <td>not connected to relation</td>
+                          <td><%= data[i].score %></td>
+                          <td><%= data[i].time %></td>
+                          <td><%= data[i].userId %></td>
+                          <td><%= data[i].createdAt %></td>
+                        </tr>
+                      </tbody>
+                      <% } %>
+                    </table>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "score": "win",
+        "time": "2012-02-01",
+        "userId": 1
+    },
+    {
+        "score": "lose",
+        "time": "2012-02-01",
+        "userId": 2
+    },
+    {
+        "score": "draw",
+        "time": "2012-02-01",
+        "userId": 1
+    },
+    {
+        "score": "draw",
+        "time": "2012-02-01",
+        "userId": 2
+    }
+]

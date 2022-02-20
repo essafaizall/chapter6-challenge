@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../head.ejs') %>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col main-grid">
+            <center>
+                    <br><br><br><br><br><br>
+                <%- include('../menu.ejs') %>
+            </center>
+            </div>
+            <div class="col-10">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                  </div>
+                  <div class="col-5">
+                    <br><br><br><br>
+                    <center><font size="30">Add data user</font></center><br><br>
+                    <form action="/user-game/add" method="post">
+                        <div class="input-group flex-nowrap">
+                            <input  type="text" class="form-control" name="username" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                        </div>
+                        <br>
+                        <div class="input-group flex-nowrap">
+                            <input  type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

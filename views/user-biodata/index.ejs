@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../head.ejs') %>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col main-grid">
+            <center>
+                    <br><br><br><br><br><br>
+                <%- include('../menu.ejs') %>
+            </center>
+            </div>
+            <div class="col-10">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                  </div>
+                  <div class="col-10">
+                    <br><br><br><br>
+                    <center><font size="30">Data user biodata</font></center>
+                    <table class="table">
+                      <script>
+                        console.log(data)
+                        </script>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="col-1">No</th>
+                          <th scope="col" class="col-2">Full name</th>
+                          <th scope="col" class="col-2">Email</th>
+                          <th scope="col" class="col-2">Gender</th>
+                          <th scope="col" class="col-2">Birthday</th>
+                          <th scope="col" class="col-5">Created at</th>
+                          <th scope="col" class="col-3">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <% for (let i = 0; i < data.length; i++){ %>
+                          <th scope="row"><%= data[i].id %></th>
+                          <td><%= data[i].full_name %></td>
+                          <td><%= data[i].email %></td>
+                          <td><%= data[i].gender %></td>
+                          <td><%= data[i].birthday %></td>
+                          <td><%= data[i].createdAt %></td>
+                          <td><a href="/user-biodata/edit/<%= data[i].id  %>" class="btn btn-success"> Edit </a> &nbsp; <a href="/user-biodata/delete/<%= data[i].id  %>" class="btn btn-danger"> Delete </a></td>
+                        </tr>
+                      </tbody>
+                      <% } %>
+                    </table>
+                    <center><a href="/user-biodata/add" class="btn btn-primary"> Add data </a></center>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.main-grid{
+    background-size: 100% 100%;
+    object-fit: contain;
+    height: 800px;
+    position: relative;
+    background-color: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+.login {
+    font-family:  "Poppins", serif;
+    text-align: center;
+    font-size: 45px;
+}
